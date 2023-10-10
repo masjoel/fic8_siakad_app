@@ -211,7 +211,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ],
             ),
           ),
-          const SizedBox(height: 20.0),
+          const SizedBox(height: 80.0),
           Container(
             padding:
                 const EdgeInsets.symmetric(horizontal: 16.0, vertical: 14.0),
