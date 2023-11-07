@@ -29,7 +29,7 @@ class _JadwalMatkulPageState extends State<JadwalMatkulPage> {
         body: Padding(
           padding: const EdgeInsets.symmetric(
           vertical: 32,
-          horizontal: 24,
+          horizontal: 16,
         ),
           child: Column(
             // padding: const EdgeInsets.all(24.0),
@@ -92,8 +92,8 @@ class _JadwalMatkulPageState extends State<JadwalMatkulPage> {
                                 course: data[index].schedule.subject.title,
                                 lecturer: data[index].schedule.subject.lecturer.name,
                                 description: data[index].schedule.ruangan,
-                                startTime: data[index].schedule.jamMulai,
-                                endTime: data[index].schedule.jamSelesai,
+                                startTime: data[index].schedule.jamMulai.toString(),
+                                endTime: data[index].schedule.jamSelesai.toString(),
                               ),
                             );
                           },

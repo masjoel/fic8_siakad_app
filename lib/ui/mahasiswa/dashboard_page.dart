@@ -1,13 +1,13 @@
-import 'package:fic8_siakad_app/ui/mahasiswa/absensi_page.dart';
-import 'package:fic8_siakad_app/ui/mahasiswa/jadwal_matkul_page.dart';
-import 'package:fic8_siakad_app/ui/mahasiswa/nilai_mk_page.dart';
 import 'package:flutter/material.dart';
-
 import '../../common/constants/colors.dart';
 import '../../common/constants/images.dart';
 import '../../common/widgets/menu_card.dart';
 import '../../common/widgets/search_input.dart';
+import 'absensi_page.dart';
+import 'jadwal_matkul_page.dart';
 import 'khs_page.dart';
+import 'nilai_mk_page.dart';
+import 'widgets/sample_map_page.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
@@ -39,7 +39,22 @@ class _DashboardPageState extends State<DashboardPage> {
               children: [
                 IconButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const AbsensiPage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SampleMapPage()));
+                  },
+                  icon: const Icon(
+                    Icons.map,
+                    color: ColorName.green,
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const AbsensiPage()));
                   },
                   icon: const Icon(
                     Icons.qr_code_scanner,

@@ -6,6 +6,7 @@ import '../../common/constants/icons.dart';
 import '../../common/constants/images.dart';
 import '../../common/widgets/buttons.dart';
 import '../../common/widgets/custom_scaffold.dart';
+import 'widgets/qrcode_page.dart';
 
 class AbsensiPage extends StatefulWidget {
   const AbsensiPage({super.key});
@@ -141,12 +142,12 @@ class _AbsensiPageState extends State<AbsensiPage> {
           const SizedBox(height: 20.0),
           Button.filled(
             onPressed: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => const ScanPage(),
-              //   ),
-              // );
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const QrCodePage(),
+                ),
+              );
             },
             label: 'SCAN',
             icon: const ImageIcon(

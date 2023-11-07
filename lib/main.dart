@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'bloc/khs/khs_bloc.dart';
+import 'bloc/qrcode/qrcode_bloc.dart';
 import 'bloc/schedules/schedules_bloc.dart';
 import 'data/datasources/auth_local_datasource.dart';
 import 'ui/auth/auth_page.dart';
@@ -23,6 +24,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => SchedulesBloc(),
+        ),
+        BlocProvider(
+          create: (context) => QrcodeBloc(),
         ),
       ],
       child: MaterialApp(
