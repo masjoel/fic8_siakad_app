@@ -6,6 +6,8 @@ class CourseScheduleModel {
   final String course;
   final String lecturer;
   final String description;
+  final String startTime;
+  final String endTime;
 
   CourseScheduleModel({
     required this.dateStart,
@@ -13,6 +15,8 @@ class CourseScheduleModel {
     required this.course,
     required this.lecturer,
     required this.description,
+    required this.startTime,
+    required this.endTime,
   });
 
   TimeOfDay get timeStart =>
