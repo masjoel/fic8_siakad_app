@@ -16,12 +16,12 @@ class CourseScheduleTile extends StatelessWidget {
           SizedBox(
             width: 65.0,
             child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 16.0),
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
               child: Column(
                 children: [
-                  Text(data.timeStart.format(context)),
+                  Text(data.startTime),
                   Text(
-                    data.timeEnd.format(context),
+                    data.endTime,
                     style: const TextStyle(
                       color: ColorName.grey,
                     ),
@@ -30,30 +30,34 @@ class CourseScheduleTile extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(width: 12.0),
+          const SizedBox(width: 8.0),
           const VerticalDivider(),
-          const SizedBox(width: 12.0),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  data.course,
-                  style: const TextStyle(
-                    color: ColorName.primary,
+          const SizedBox(width: 8.0),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    data.course,
+                    style: const TextStyle(
+                      color: ColorName.primary,
+                    ),
+                    overflow: TextOverflow.ellipsis, 
+                    maxLines:1, 
                   ),
-                ),
-                const SizedBox(height: 18.0),
-                Text('Dosen: ${data.lecturer}'),
-                const SizedBox(height: 18.0),
-                Text(
-                  data.description,
-                  style: const TextStyle(
-                    color: ColorName.grey,
+                  const SizedBox(height: 8.0),
+                  Text('Dosen: ${data.lecturer}'),
+                  const SizedBox(height: 8.0),
+                  Text(
+                    data.description,
+                    style: const TextStyle(
+                      color: ColorName.grey,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ],

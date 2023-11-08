@@ -92,8 +92,8 @@ class _JadwalMatkulPageState extends State<JadwalMatkulPage> {
                                 course: data[index].schedule.subject.title,
                                 lecturer: data[index].schedule.subject.lecturer.name,
                                 description: data[index].schedule.ruangan,
-                                startTime: data[index].schedule.jamMulai.toString(),
-                                endTime: data[index].schedule.jamSelesai.toString(),
+                                startTime: data[index].schedule.jamMulai,
+                                endTime: data[index].schedule.jamSelesai,
                               ),
                             );
                           },
